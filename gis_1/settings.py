@@ -16,7 +16,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-local_env=open(os.path.join(BASE_DIR,'.env'))
+local_env = open(os.path.join(BASE_DIR, '.env'))
 
 env_list = dict()
 
@@ -25,7 +25,7 @@ while True:
     if not line:
         break
 
-    line = line.replace('/n','')
+    line = line.replace('/n', '')
     start = line.find('=')
     key = line[:start]
     value = line[start+1:]
@@ -70,8 +70,7 @@ ROOT_URLCONF = 'gis_1.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
