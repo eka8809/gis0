@@ -16,7 +16,7 @@ def hello_world(request):
         temp = request.POST.get('hello_world_input')
 
         new_hello_world = HelloWorld()
-        new_hello_world.text =temp
+        new_hello_world.text = temp
         new_hello_world.save()
 
         return HttpResponseRedirect(reverse('accountapp:hello_world'))
